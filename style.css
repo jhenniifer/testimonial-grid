@@ -1,0 +1,126 @@
+:root{
+    --violet: hsl(263, 55%, 52%);
+    --grayish-blue: hsl(217, 19%, 35%);
+    --blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --primary-font:"Barlow Semi Condensed", serif;
+    --fw-sm: 500;
+    --fw-lg: 600;
+}
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--primary-font)
+}
+.testimony__container{
+    padding: 3rem 2rem ;
+    background-color: var(--light-grayish-blue);
+}
+.testimony{
+padding: 1rem 2.5rem ;
+border-radius: 10px;
+margin-bottom: 40px;
+}
+.testimony__head{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.testimony__img{
+    width: 10%;
+    max-width: 40px;
+    height: fit-content;
+    border-radius: 50%;
+    border: 2px solid var(--light-grayish-blue);
+    /* opacity: .5; */
+}
+.testimony__name{
+    margin-bottom: 5px;
+    font-weight: var(--fw-lg);
+    color: var(--light-grayish-blue); 
+}
+.testimony__position{
+    margin-top: 0; 
+    color: var(--light-grayish-blue);
+    opacity: 0.5;
+}
+.testimony__title{
+    color: var(--white);
+    font-size: 1.6rem ;
+    line-height: 30px;
+    font-weight: var(--fw-lg);
+}
+.testimony__desc{
+    color: var(--light-grayish-blue);
+    opacity: 0.7;
+    font-size: 1.89ch;
+    line-height: 25px;
+}
+.testimony--purple{
+    background-color: var(--violet) ;
+    position: relative;
+}
+.testimony__quote{
+    position: absolute;
+    top: 0;
+    right: 7%;
+    z-index: 0;
+}
+.testimony--gray{
+    background-color: var(--grayish-blue);
+}
+.testimony--white{
+    background-color: var(--white);
+}
+.name--gray, .title--gray, .position--gray, .desc--gray{
+    color: var(--grayish-blue);
+}
+.testimony--purple {
+    grid-area: one;
+}
+.testimony--gray1 {
+    grid-area: two;
+}
+.testimony--white1 {
+    grid-area: three;
+}
+.testimony--gray2 {
+    grid-area: four;
+}
+.testimony--white2 {
+    grid-area: five;
+}
+ 
+@media (min-width:992px) {
+   
+    /* .testimony__container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1f);
+        /* grid-template-areas:
+        'one one two three'
+        'four five three'
+         ; */
+    
+        .testimony__container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+            'one one two five'
+            'three four four five'
+            ;
+            gap: 25px;
+        }
+        .testimony__img{
+            width: 40px;
+        }
+       .testimony{
+        padding: 1rem 2.5rem;
+         
+         margin-bottom: 10px;
+       }
+        } 

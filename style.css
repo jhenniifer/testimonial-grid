@@ -72,6 +72,9 @@ margin-bottom: 40px;
 .testimony--gray{
     background-color: var(--grayish-blue);
 }
+.testimony--darkgray{
+    background-color: var(--blackish-blue);
+}
 .testimony--white{
     background-color: var(--white);
 }
